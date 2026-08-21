@@ -1,0 +1,239 @@
+.ms-home-builder-storage-wrap {
+  display: none;
+}
+
+.ms-home-builder {
+  margin-top: 14px;
+}
+
+.ms-home-builder__workspace {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) 290px;
+}
+
+.ms-home-builder__canvas,
+.ms-home-builder__panel {
+  background: #fff;
+  border: 1px solid #e2e6ee;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(33, 41, 62, 0.06);
+}
+
+.ms-home-builder__canvas {
+  padding: 16px;
+}
+
+.ms-home-builder__canvas-head h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.ms-home-builder__canvas-head p {
+  margin: 0;
+  color: #63708a;
+}
+
+.ms-home-builder__canvas-list {
+  margin-top: 16px;
+}
+
+.ms-home-builder__canvas-empty {
+  border: 2px dashed #d8deeb;
+  border-radius: 14px;
+  color: #73809b;
+  padding: 24px;
+  text-align: center;
+}
+
+.ms-home-builder__sortable {
+  display: grid;
+  gap: 12px;
+}
+
+.ms-home-builder__block {
+  border: 1px solid #e2e7f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ms-home-builder__block.is-active {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 2px rgba(34, 113, 177, 0.08);
+}
+
+.ms-home-builder__block-head {
+  align-items: center;
+  background: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 8px 12px;
+}
+
+.ms-home-builder__block-main {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+}
+
+.ms-home-builder__drag {
+  background: #edf2fa;
+  border: 0;
+  border-radius: 10px;
+  color: #6d7b94;
+  cursor: move;
+  font-size: 20px;
+  height: 32px;
+  line-height: 1;
+  width: 32px;
+}
+
+.ms-home-builder__block-meta strong,
+.ms-home-builder__block-meta small {
+  display: block;
+  line-height: 1.3;
+}
+
+.ms-home-builder__block-meta strong {
+  color: #1e293b;
+  font-size: 13px;
+}
+
+.ms-home-builder__block-meta small {
+  color: #6f7c94;
+  font-size: 11px;
+}
+
+.ms-home-builder__block-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ms-home-builder__edit,
+.ms-home-builder__delete {
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 32px;
+  width: 32px;
+}
+
+.ms-home-builder__edit {
+  background: #eaf4ff;
+}
+
+.ms-home-builder__delete {
+  background: #ffeceb;
+}
+
+.ms-home-builder__inline-settings {
+  border-top: 1px solid #e8edf5;
+  padding: 12px;
+}
+
+.ms-home-builder__inline-rows {
+  display: grid;
+  gap: 10px;
+}
+
+.ms-home-builder__setting-row {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 140px minmax(0, 1fr);
+}
+
+.ms-home-builder__setting-row label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ms-home-builder__setting-field input,
+.ms-home-builder__setting-field select,
+.ms-home-builder__setting-field textarea {
+  border: 1px solid #d3dceb;
+  border-radius: 10px;
+  min-height: 38px;
+  width: 100%;
+}
+
+.ms-home-builder__setting-group {
+  border: 1px dashed #dde5f1;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.ms-home-builder__setting-group h5 {
+  margin: 0 0 10px;
+}
+
+.ms-home-builder__placeholder {
+  border: 2px dashed #8bb7de;
+  border-radius: 12px;
+  height: 58px;
+}
+
+.ms-home-builder__panel {
+  padding: 16px;
+}
+
+.ms-home-builder__panel h4 {
+  margin: 0 0 10px;
+}
+
+.ms-home-builder__widgets {
+  display: grid;
+  gap: 8px;
+}
+
+.ms-home-builder__widget.button {
+  justify-content: center;
+  min-height: 38px;
+  text-align: center;
+}
+
+.ms-home-builder__confirm.hidden {
+  display: none;
+}
+
+.ms-home-builder__confirm {
+  position: relative;
+  z-index: 20;
+}
+
+.ms-home-builder__confirm-backdrop {
+  background: rgba(15, 23, 42, 0.45);
+  inset: 0;
+  position: fixed;
+}
+
+.ms-home-builder__confirm-card {
+  background: #fff;
+  border-radius: 14px;
+  left: 50%;
+  max-width: 320px;
+  padding: 16px;
+  position: fixed;
+  top: 120px;
+  transform: translateX(-50%);
+}
+
+.ms-home-builder__confirm-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1100px) {
+  .ms-home-builder__workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ms-home-builder__setting-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
